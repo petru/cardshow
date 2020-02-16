@@ -53,9 +53,7 @@ def get_card_html(text, position_in_row, card_type = 'answers'):
     card_class = 'card questions' if card_type == 'questions' else 'card'
     if position_in_row < 3:
         card_class += " right-margin"
-    html = """<div class="column {}">
-        <p>{}</p>
-    </div>""".format(card_class, text)
+    html = """\n\t<div class="column {}"><p>{}</p></div>""".format(card_class, text)
     return html
 
 
@@ -66,7 +64,7 @@ def build(what):
     for idx, line in enumerate(entries):
         position_in_row += 1 # print row <div> every three cards so we get a new line
         if position_in_row == 1:
-            page += '<div class="row">'
+            page += '\n<div class="row">'
         page += get_card_html(line, position_in_row, what)
 
         if position_in_row == 3:
