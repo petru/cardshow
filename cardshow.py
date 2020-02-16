@@ -44,8 +44,8 @@ page_footer = """
 
 
 def fetch(file):
-    f = open(file, 'r', encoding='utf8')
-    contents = f.read()
+    with open(file, 'r', encoding='utf8') as f:
+        contents = f.read()
     lines = contents.split('\n')
     return lines
 
@@ -85,9 +85,9 @@ def build(what):
     return page
 
 def export(what):
-    f = open('{}.html'.format(what), 'w', encoding='utf8')
     page = build(what)
-    f.write(page)
+    with open('{}.html'.format(what), 'w', encoding='utf8') as f:
+        f.write(page)
     return
 
 export('questions')
