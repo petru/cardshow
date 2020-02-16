@@ -11,3 +11,7 @@ In the `Page Setup...` dialog:
 * check `Print Background (colors & images)`
 * set margins to 12.7mm
 * make sure `Headers & Footers` are all set to `--blank--`
+
+This code relies on:
+* Milligram CSS framework
+* Google Fonts
