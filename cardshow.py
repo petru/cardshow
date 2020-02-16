@@ -51,7 +51,7 @@ def fetch(file):
 
 def get_card_html(text, position_in_row, card_type = 'answers'):
     card_class = 'card questions' if card_type == 'questions' else 'card'
-    if position_in_row <3:
+    if position_in_row < 3:
         card_class += " right-margin"
     html = """<div class="column {}">
         <p>{}</p>
@@ -69,9 +69,18 @@ def build(what):
             page += '<div class="row">'
         page += get_card_html(line, position_in_row, what)
 
-        if position_in_row == 3 or idx == len(entries)-1:
+        if position_in_row == 3:
             page += '</div>'
             position_in_row = 0
+
+        # make sure we end our page with blanks, if we have to
+        elif idx == len(entries)-1:
+            while position_in_row < 3:
+                position_in_row += 1
+                page += get_card_html('', position_in_row, what)
+            page += '</div>'
+            
+
     page += page_footer
     return page
 
