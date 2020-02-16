@@ -3,6 +3,7 @@ page_header = """
 <html>
     <head>
         <meta charset="utf-8">
+        <title>cardshow</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.css" integrity="sha256-7LuOHbsBImoaCHWzjqQDLeGK9kq/rZZqIr6Gtkz0WzI=" crossorigin="anonymous" />
         <link href="https://fonts.googleapis.com/css?family=Farro|Oswald|Roboto+Condensed&display=swap" rel="stylesheet"> 
         <style type="text/css">
@@ -34,12 +35,12 @@ page_header = """
         </style>
     </head>
     <body>
-    <div class="container">
+        <div class="container">
 """
 page_footer = """
-    </div>
+        </div>
     </body>
-    </html>
+</html>
 """
 
 
