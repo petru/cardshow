@@ -69,11 +69,9 @@ def build(what):
             page += '<div class="row">'
         page += get_card_html(line, position_in_row, what)
 
-        if position_in_row == 3:
+        if position_in_row == 3 or idx == len(entries)-1:
             page += '</div>'
             position_in_row = 0
-
-
     page += page_footer
     return page
 
