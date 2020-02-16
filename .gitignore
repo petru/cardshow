@@ -131,4 +131,5 @@ dmypy.json
 # cardshow
 questions.txt
 answers.txt
-export.html
+*.html
+*.pdf
