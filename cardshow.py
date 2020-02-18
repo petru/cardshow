@@ -25,6 +25,7 @@ page_header = """
                     color: #000;
                     font-size: 25px;
                     letter-spacing: 0.01px;
+                    padding: 15px;
                 }
                 .questions {
                     background-color: #000;
